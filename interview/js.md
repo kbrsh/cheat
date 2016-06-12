@@ -17,3 +17,11 @@
 * What is an event?
 * What is an object?
 * How do you use `this`?
+* What does a semicolon indicate?
+* What is a loop? How are they used?
+* What is an array?
+* Make a function that takes a string as a parameter, it returns the string reversed.
+ * function reverse(str) {
+    return str.split("").reverse().join("")
+}
+
