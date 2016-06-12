@@ -1,5 +1,6 @@
 # JS Interview Questions
 
+* What is JS used for?
 * Create a Hello World Program
   * Sample Answer: 
   ```js
@@ -13,3 +14,6 @@
     console.log(f ? "Fizz" : b ? "Buzz" : fb ? "FizzBuzz" : i)
   }
   ```
+* What is an event?
+* What is an object?
+* How do you use `this`?
