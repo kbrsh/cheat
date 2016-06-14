@@ -33,6 +33,23 @@ function factorialize(num) {
 
 ### Sorting
 
+Bubble Sort:
+```js
+function bub(arr) {
+  for (var j = 0; j < arr.length; j++) {
+    for (var i = 0; i < (arr.length - j); i++) {
+      if (arr[i] > arr[i + 1]) {
+        var a = arr[i]
+        var b = arr[i + 1]
+        arr[i] = b
+        arr[i + 1] = a
+      }
+    }
+  }
+  return arr;
+}
+```
+
 Quicksort:
 ```js
 function quicksort(arr) {
