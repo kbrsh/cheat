@@ -10,6 +10,27 @@ function reverse(str) {
 }
 ```
 
+Find longest word:
+```js
+function findLongestWord(str) {
+  var words = str.split(" ");
+  str = words.sort(function(a, b) {
+    return b.length - a.length;
+  })[0];
+  return str;
+}
+```
+
+### Numbers
+
+Factorialize:
+```js
+function factorialize(num) {
+  if(num === 0) return 1;
+  return num * factorialize(num-1);
+}
+```
+
 ### Sorting
 
 Quicksort:
