@@ -77,3 +77,27 @@ arr.sort(function(a, b) {
   return a - b;
 });
 ```
+
+To Test Speed (Quicksort Wins):
+```js
+function test() {
+	document.write('Sort<br/>')
+  var t0 = performance.now();
+  document.write(sort(arr) + '<br/>')
+  var t1 = performance.now();
+  document.write("Sort took " + (t1 - t0) + " milliseconds." + '<br/><br/>')
+
+  document.write('Quicksort<br/>')
+  var t0 = performance.now();
+  document.write(quicksort(arr) + '<br/>')
+  var t1 = performance.now();
+  document.write("Quick took " + (t1 - t0) + " milliseconds." + '<br/><br/>')
+
+  document.write('Bubble<br/>')
+  var t0 = performance.now();
+  document.write(bub(arr) + '<br/>')
+  var t1 = performance.now();
+  document.write("Bubble took " + (t1 - t0) + " milliseconds." + '<br/><br/>')
+}
+test()
+```
