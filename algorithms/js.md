@@ -31,3 +31,11 @@ return [];
   return quicksort(left).concat(pivot, quicksort(right));
 }
 ```
+
+Native JS Sort:
+```js
+var arr = [454, 664,224, 675, 4]
+arr.sort(function(a, b) {
+  return a - b;
+});
+```
