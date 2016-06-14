@@ -31,6 +31,14 @@ function factorialize(num) {
 }
 ```
 
+FizzBuzz:
+```js
+  for(var i = 0; i <= 100; i++) {
+    var f = i % 3 == 0, b = i % 5 == 0, fb = f && b
+    console.log(f ? "Fizz" : b ? "Buzz" : fb ? "FizzBuzz" : i)
+  }
+```
+
 ### Sorting
 
 Bubble Sort:
