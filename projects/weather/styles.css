@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: black;
+  color: white;
+}
+
+
+#unit {
+  cursor: pointer;
+}
+
+.center {
+  padding-top: calc(100vh/4)
+}
+
+.big {
+  font-size: 5rem;
+}
+footer {
+	padding: 2vh 8vh;
+	text-align: center;
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+}
+
+#kabir {
+	text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+.underline {
+	position: relative !important;
+}
+
+.underline.black::after {
+	content: '';
+  position: absolute !important;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  border-bottom: 2px solid black;
+  transition: all 0.4s ease;
+}
+
+.underline.white::after {
+	content: '';
+  position: absolute !important;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  border-bottom: 2px solid white;
+  transition: all 0.4s ease;
+}
+
+.underline:hover::after {
+	width:100%;
+}
