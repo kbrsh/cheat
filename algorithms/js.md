@@ -172,7 +172,34 @@ function circle(directions) {
             oy = y;
           }
         }
-        break;    
+        break;
+        
+      case "R":
+      	if(forv==="F") {
+        	x++;
+          forv="R"
+        } else if(forv==="L") {
+        	y++;
+          forv="F";
+        } else if(forv==="R") {
+        	y--;
+          forv="B";
+        } else if(forv==="B") {
+        	x--;
+          forv="L";
+        }
+      	prev="R";
+        it++;
+        document.write("X: " + x, " Y: " + y + "<br/>");
+        if(it % 4 === 0) {
+        	if(x === ox && y === oy) {
+          	document.write("CIRCLE DETECTED! CIRCUMFERENCE: " + it);
+            ox = x;
+            oy = y;
+          }
+        }
+        break;
+        
       default:
       	document.write("Command Error");
     }
