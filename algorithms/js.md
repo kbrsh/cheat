@@ -109,3 +109,73 @@ function test() {
 }
 test()
 ```
+
+
+### Other
+
+Check if "robot" has gone a circle, given a list of directions:
+
+```js
+function circle(directions) {
+	directions = directions.split("");
+  var x = 0, y = 0, ox = 0, oy = 0, it = 0, prev="", forv="F";
+  document.write("DIRECTIONS: &nbsp;" + directions + "<br/><br/>")
+  for (var i = 0; i < directions.length; i++) {
+  	var d = directions[i];
+  	switch(d) {
+    	case "F":
+      	if(forv==="F") {
+        	y++;
+          forv="F";
+        } else if(forv==="L") {
+        	x--;
+          forv="L";
+        } else if(forv==="R") {
+        	x++;
+          forv="R";
+        } else if(forv="B") {
+        	y--;
+          forv="B";
+        }
+      	prev="F";
+        it++;
+        document.write("X: " + x, " Y: " + y + "<br/>");
+        if(it % 4 === 0) {
+        	if(x === ox && y === oy) {
+          	document.write("CIRCLE DETECTED");
+            ox = x;
+            oy = y;
+          }
+        }
+        break; 
+      case "L":
+      	if(forv==="F") {
+        	x--;
+          forv="L"
+        } else if(forv==="L") {
+        	y--;
+          forv="B";
+        } else if(forv==="R") {
+        	y++;
+          forv="F";
+        } else if(forv==="B") {
+        	x++;
+          forv="R";
+        }
+      	prev="L";
+        it++;
+        document.write("X: " + x, " Y: " + y + "<br/>");
+        if(it % 4 === 0) {
+        	if(x === ox && y === oy) {
+          	document.write("CIRCLE DETECTED");
+            ox = x;
+            oy = y;
+          }
+        }
+        break;    
+      default:
+      	document.write("Command Error");
+    }
+  }
+}
+```
