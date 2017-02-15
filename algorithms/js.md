@@ -100,17 +100,17 @@ arr.sort(function(a, b) {
 Binary Search
 ```js
 var binarySearch = function(query, arr) {
-	var start = 0;
+  var start = 0;
   var end = arr.length - 1;
   while(start <= end) {
-  	var index = Math.round((start + end) / 2);
+    var index = Math.round((start + end) / 2);
     var item = arr[index];
     if(query === item) {
-    	return item;
+      return index;
     } else if(query > item) {
       start = index + 1;
     } else {
-    	end = index - 1;
+      end = index - 1;
     }
   }
   return null;
