@@ -60,30 +60,26 @@ function bub(arr) {
 
 Quicksort:
 ```js
-var getPivot = function(arr) {
-  var index = Math.floor(Math.random() * arr.length);
-  var pivot = arr[index];
-  arr.splice(index, 1);
-  return pivot;
-}
-
 var quick = function(arr, condition) {
   if(arr.length < 2) {
     return arr;
   };
-  var pivot = getPivot(arr);
+  var pivot = arr[Math.floor(Math.random()*arr.length)];
   var left = [];
+  var equal = [];
   var right = [];
   for(var i = 0; i < arr.length; i++) {
     var item = arr[i];
-    var criteria = condition(item, pivot);
-    if(criteria) {
+    var sortable = condition(item, pivot);
+    if(item === pivot) {
+      equal.push(item)
+    } else if(sortable) {
       left.push(item);
     } else {
       right.push(item);
     }
   }
-  return quick(left, condition).concat(pivot, quick(right, condition));
+  return quick(left, condition).concat(equal, quick(right, condition));
 }
 ```
 
