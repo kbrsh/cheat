@@ -95,6 +95,30 @@ arr.sort(function(a, b) {
 });
 ```
 
+### Search
+
+Binary Search
+```js
+var binarySearch = function(query, arr) {
+	var start = 0;
+  var end = arr.length - 1;
+  while(start <= end) {
+  	var index = Math.round((start + end) / 2);
+    var item = arr[index];
+    if(query === item) {
+    	return item;
+    } else if(query > item) {
+      start = index + 1;
+    } else {
+    	end = index - 1;
+    }
+  }
+  return null;
+}
+binarySearch(3, [1, 2, 3, 4, 5]);
+// => 2
+```
+
 ### Other
 
 Check if "robot" has gone a circle, given a list of directions:
